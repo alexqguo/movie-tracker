@@ -14,11 +14,10 @@
 		  <input type="submit" id="movie-submit" class="movie-submit" value="Submit!">
 	  </form>
 
-	  <ul class="movie-list">
+	  <ul id="movie-list" class="movie-list">
 		  <% for(var i=0; i<movies.length; i++) { %>
-		  	<li data-movie-id="<%- movies[i].id %>">
-			  	<%- movies[i].name %>
-		  	</li>
+		  	<% var movie = movies[i] %>
+		  	<% include movieItem %>
 		  <% } %>
 	  </ul>
 

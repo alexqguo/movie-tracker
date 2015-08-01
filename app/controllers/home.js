@@ -23,9 +23,9 @@ router.get('/asdf', function(req, res, next) {
 router.post('/movies/create', function(req, res, next) {
 	db.Movie.create(req.body)
 		.then(function(movie) {
-			res.send({status: "SUCCESS", movie: movie});
+			res.render('movieItem', { movie: movie });
 		})
 		.catch(function(error) {
-			res.send({status: "ERROR", error: error});
+			res.status(500).send({status: "ERROR", error: error});
 		});
 });

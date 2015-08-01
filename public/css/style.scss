@@ -34,7 +34,8 @@ textarea, input {
 }
 
 body {
-  font: 14px "Lato", Helvetica, Arial, sans-serif;
+  font: 16px "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
 .container {
@@ -55,7 +56,6 @@ h1 {
 
 .input-row {
 	margin-bottom: 20px;
-	font-size: 16px;
 
 	label {
 		font-weight: 200;
