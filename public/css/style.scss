@@ -104,3 +104,33 @@ h1 {
 		}
 	}
 }
+
+.movie-list {
+	.movie-item {
+		margin-bottom: 5px;
+
+		.movie-name {
+			margin-right: 5px;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.movie-watch {
+	font-size: 12px;
+	padding: 1px 3px;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 400;
+
+	&.movie-a {
+		background-color: #3f94dc;
+	}
+
+	&.movie-s {
+		background-color: #963296;
+	}
+}

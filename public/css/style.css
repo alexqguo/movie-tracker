@@ -86,3 +86,21 @@ h1 {
     .input-row .movie-name:focus {
       box-shadow: 0 0 5px #51cbee;
       border: 1px solid #51cbee; }
+
+.movie-list .movie-item {
+  margin-bottom: 5px; }
+  .movie-list .movie-item .movie-name {
+    margin-right: 5px; }
+  .movie-list .movie-item:hover {
+    cursor: pointer; }
+
+.movie-watch {
+  font-size: 12px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 400; }
+  .movie-watch.movie-a {
+    background-color: #3f94dc; }
+  .movie-watch.movie-s {
+    background-color: #963296; }

@@ -1,3 +1,10 @@
-<li data-movie-id="<%- movie.id %>">
-	<%- movie.name %>
+<li class="movie-item" data-movie-id="<%- movie.id %>">
+	<span class="movie-name"><%- movie.name %></span>
+
+	<% if (movie.a) { %>
+		<span class="movie-watch movie-a">A</span>
+	<% } %>
+	<% if (movie.s) { %>
+		<span class="movie-watch movie-s">S</span>
+	<% } %>
 </li>
