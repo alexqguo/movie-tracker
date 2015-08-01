@@ -1,30 +1,11 @@
-// Example model
-
+// Movie model
 
 module.exports = function (sequelize, DataTypes) {
 
-  // var Article = sequelize.define('Article', {
-  //   title: DataTypes.STRING,
-  //   url: DataTypes.STRING,
-  //   text: DataTypes.STRING
-  // }, {
-  //   classMethods: {
-  //     associate: function (models) {
-  //       // example on how to add relations
-  //       // Article.hasMany(models.Comments);
-  //     }
-  //   }
-  // });
-
-  // return Article;
-
   var Movie = sequelize.define('Movie', {
-    name: DataTypes.STRING
-
-  }, {
-    classMethods: {
-
-    }
+    name: { type: DataTypes.STRING, notEmpty: true, allowNull: false },
+    a: { type: DataTypes.BOOLEAN, defaultValue: false, allowNull: false },
+    s: { type: DataTypes.BOOLEAN, defaultValue: false, allowNull: false }
   });
 
   return Movie;
