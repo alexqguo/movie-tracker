@@ -6,6 +6,10 @@
 	var movieA = document.getElementById("movie-a");
 	var movieS = document.getElementById("movie-s");
 
+	function addCreatedMovieToList(movie) {
+		console.log("add movie " + movie.name);
+	}
+
 	function handleInputSubmit(e) {
 		e.preventDefault();
 		var movieName = movieInput.value;
@@ -18,9 +22,12 @@
 				s: movieS.checked
 			}
 
-			qwest.post("/movies/create", data, { dataType: "json", responseType: "text" })
+			qwest.post("/movies/create", data, { dataType: "json", responseType: "json" })
 				.then(function(xhr, resp) {
-					// console.log(resp);
+					if (resp.status === "SUCCESS") {
+						addCreatedMovieToList(resp.movie);
+					}
+
 					movieInput.value = "";
 				})
 				.catch(function(xhr, resp, e) {
