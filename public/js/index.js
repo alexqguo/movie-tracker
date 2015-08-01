@@ -16,12 +16,17 @@
 
 		qwest.put(url, data, { dataType: "json" })
 			.then(function(xhr, resp) {
+				var movieItem = target.closest(".movie-item");
 				var watcher = data.a ? "a" : "s";
+
+				// WARNING: This gets a bit dirty
 				target.style.display = "none";
-				target
-					.closest(".movie-item")
-					.querySelectorAll(".movie-" + watcher)[0]
-					.classList.remove("hidden");
+				movieItem.querySelectorAll(".movie-" + watcher)[0].classList.remove("hidden");
+				movieItem.setAttribute("data-" + watcher, "true");
+
+				if (movieItem.getAttribute("data-s") && movieItem.getAttribute("data-a")) {
+					movieItem.querySelectorAll(".watched-both")[0].classList.remove("hidden");
+				}
 			})
 			.catch(function(xhr, resp, e) {
 				alert("There was an error! I'm lazy so check the console.");
