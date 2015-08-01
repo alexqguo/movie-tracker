@@ -1,5 +1,3 @@
-
-
 var express = require('express'),
 	bodyParser = require('body-parser'),
   config = require('./config/config'),
@@ -18,4 +16,3 @@ db.sequelize
   }).catch(function (e) {
     throw new Error(e);
   });
-
