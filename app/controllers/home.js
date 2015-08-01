@@ -17,5 +17,5 @@ router.get('/', function (req, res, next) {
 
 //Move this to separate file eventually
 router.post('/movies/create', function(req, res, next) {
-	res.send(req.toString());
+	res.send(req.body);
 });

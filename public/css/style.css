@@ -48,35 +48,41 @@ h1 {
   font-size: 42px;
   margin: 10px 0; }
 
-.movie-submit {
-  text-decoration: none;
-  color: white;
-  font-weight: 200;
-  font-size: 16px;
-  font-family: inherit;
-  padding: 6px 15px;
-  background-color: #3399FF;
-  border-radius: 3px;
-  border: none;
-  border-bottom: 2px solid #0033FF;
-  margin-left: 10px; }
-  .movie-submit:active {
-    background-color: #0033FF; }
-  .movie-submit:hover {
-    cursor: pointer; }
-
-.movie-input {
-  font-size: 16px;
-  font-weight: 200;
-  font-family: inherit;
-  padding: 6px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  min-width: 300px;
-  -webkit-transition: all 0.10s ease-in-out;
-  -moz-transition: all 0.10s ease-in-out;
-  -ms-transition: all 0.10s ease-in-out;
-  -o-transition: all 0.10s ease-in-out; }
-  .movie-input:focus {
-    box-shadow: 0 0 5px #51cbee;
-    border: 1px solid #51cbee; }
+.input-row {
+  margin-bottom: 20px;
+  font-size: 16px; }
+  .input-row label {
+    font-weight: 200;
+    margin-left: 8px; }
+  .input-row .movie-submit {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 6px 15px;
+    background-color: #3399FF;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid #0033FF;
+    margin-left: 10px; }
+    .input-row .movie-submit:active {
+      background-color: #0033FF; }
+    .input-row .movie-submit:hover {
+      cursor: pointer; }
+  .input-row .movie-name {
+    font-size: 16px;
+    font-weight: 200;
+    font-family: inherit;
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    min-width: 300px;
+    margin-right: 8px;
+    -webkit-transition: all 0.10s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -ms-transition: all 0.10s ease-in-out;
+    -o-transition: all 0.10s ease-in-out; }
+    .input-row .movie-name:focus {
+      box-shadow: 0 0 5px #51cbee;
+      border: 1px solid #51cbee; }

@@ -4,12 +4,15 @@
 		
 	  <h1>Movies</h1>
 	  
-	  <div class="input-row">
-	  	<form>
-			  <input id="movie-input" name="name" class="movie-input">
-			  <input type="submit" id="movie-submit" class="movie-submit" value="Submit!">
-		  </form>
-	  </div>
+  	<form id="movie-form" class="input-row">
+		  <input id="movie-name" name="name" class="movie-name">
+
+		  <span class="watched-by">Already watched by:</span>
+		  <label for="movie-a">A:</label> <input id="movie-a" type="checkbox" name="a">
+		  <label for="movie-s">S:</label> <input id="movie-s" type="checkbox" name="s">
+
+		  <input type="submit" id="movie-submit" class="movie-submit" value="Submit!">
+	  </form>
 
 	  <div class="movie-list">
 
