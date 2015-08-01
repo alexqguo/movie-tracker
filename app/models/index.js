@@ -4,9 +4,18 @@ var fs = require('fs'),
   config = require('../../config/config'),
   db = {};
 
-var sequelize = new Sequelize(config.db, {
-  storage: config.storage
-});
+var sequelize;
+
+if (process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
+    logging: true
+  });
+} else {
+  sequelize = new Sequelize(config.db, {
+    storage: config.storage
+  });
+}
+
 
 fs.readdirSync(__dirname).filter(function (file) {
   return (file.indexOf('.') !== 0) && (file !== 'index.js');
