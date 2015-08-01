@@ -15,8 +15,9 @@
 	  </form>
 
 	  <ul id="movie-list" class="movie-list">
+	  	<% var movie %>
 		  <% for(var i=0; i<movies.length; i++) { %>
-		  	<% var movie = movies[i] %>
+		  	<% movie = movies[i] %>
 		  	<% include movieItem %>
 		  <% } %>
 	  </ul>

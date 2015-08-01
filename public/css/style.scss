@@ -107,7 +107,11 @@ h1 {
 
 .movie-list {
 	.movie-item {
-		margin-bottom: 5px;
+		font-size: 18px;
+		margin-bottom: 10px;
+		max-width: 300px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
 
 		.movie-name {
 			margin-right: 5px;
@@ -115,6 +119,15 @@ h1 {
 			&:hover {
 				cursor: pointer;
 			}
+		}
+
+		.movie-details {
+			font-size: 16px;
+			margin: 3px 0 0 10px;
+		}
+
+		&:active .movie-name {
+			background-color: #eee;
 		}
 	}
 }

@@ -9,6 +9,18 @@
 	<% } %>
 
 	<div class="movie-details hidden">
-		details!
+		<% if (!movie.a) { %>
+			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>">
+				A has watched
+			</a>
+		<% } %>
+
+		<% if (!movie.s) { %>
+			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>">
+				S has watched
+			</a>
+		<% } %>
+
+		<span class="watched-both <%- movie.a && movie.s ? "" : "hidden" %>">Watched by both :)</span>
 	</div>
 </li>

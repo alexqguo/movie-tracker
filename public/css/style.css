@@ -88,11 +88,20 @@ h1 {
       border: 1px solid #51cbee; }
 
 .movie-list .movie-item {
-  margin-bottom: 5px; }
+  font-size: 18px;
+  margin-bottom: 10px;
+  max-width: 300px;
+  -webkit-user-select: none;
+  -moz-user-select: none; }
   .movie-list .movie-item .movie-name {
     margin-right: 5px; }
     .movie-list .movie-item .movie-name:hover {
       cursor: pointer; }
+  .movie-list .movie-item .movie-details {
+    font-size: 16px;
+    margin: 3px 0 0 10px; }
+  .movie-list .movie-item:active .movie-name {
+    background-color: #eee; }
 
 .movie-watch {
   font-size: 12px;

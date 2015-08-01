@@ -15,10 +15,6 @@ router.get('/', function (req, res, next) {
   });
 });
 
-router.get('/asdf', function(req, res, next) {
-	res.send("blah!");
-});
-
 //Move this to separate file eventually
 router.post('/movies/create', function(req, res, next) {
 	db.Movie.create(req.body)
@@ -28,4 +24,15 @@ router.post('/movies/create', function(req, res, next) {
 		.catch(function(error) {
 			res.status(500).send({status: "ERROR", error: error});
 		});
+});
+
+router.put('/movies/:id/update', function(req, res, next) {
+  db.Movie.find({ where: { id: req.params.id } })
+    .then(function(movie) {
+      res.send(movie);
+    })
+    .catch(function(error) {
+      res.status(500).send({status: "ERROR", error: error});
+    });
+  // res.send("update movie with id: " + req.params.id);
 });
