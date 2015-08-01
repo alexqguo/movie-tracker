@@ -21,7 +21,6 @@ router.get('/asdf', function(req, res, next) {
 
 //Move this to separate file eventually
 router.post('/movies/create', function(req, res, next) {
-	// res.send(req.body);
 	db.Movie.create(req.body)
 		.then(function(movie) {
 			res.send({status: "SUCCESS", movie: movie});
