@@ -8,13 +8,10 @@
 	var movieS = document.getElementById("movie-form-s");
 
 	function handleListClick(e) {
-		var movieItem;
+		var movieItem = e.target.closest("li");
 
-		if (e.target !== e.currentTarget) {
-			movieItem = e.target.matches("li") ? e.target : e.target.parentElement;
-			console.log(movieItem);
-		}
-		e.stopPropagation();
+		console.log(movieItem);
+
 	}
 
 	function addCreatedMovieToList(movie) {
