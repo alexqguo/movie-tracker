@@ -124,6 +124,10 @@ h1 {
 		.movie-details {
 			font-size: 16px;
 			margin: 3px 0 0 10px;
+
+			.watched-by {
+				margin-right: 5px;
+			}
 		}
 
 		&:active .movie-name {

@@ -16,7 +16,12 @@
 
 		qwest.put(url, data, { dataType: "json" })
 			.then(function(xhr, resp) {
-				console.log(resp);
+				var watcher = data.a ? "a" : "s";
+				target.style.display = "none";
+				target
+					.closest(".movie-item")
+					.querySelectorAll(".movie-" + watcher)[0]
+					.classList.remove("hidden");
 			})
 			.catch(function(xhr, resp, e) {
 				alert("There was an error! I'm lazy so check the console.");

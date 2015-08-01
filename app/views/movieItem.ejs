@@ -1,26 +1,22 @@
-<li class="movie-item" data-movie-id="<%- movie.id %>">
+<li class="movie-item">
 	<span class="movie-name"><%- movie.name %></span>
 
-	<% if (movie.a) { %>
-		<span class="movie-watch movie-a">A</span>
-	<% } %>
-	<% if (movie.s) { %>
-		<span class="movie-watch movie-s">S</span>
-	<% } %>
+	<span class="movie-watch movie-a <%- movie.a ? "" : "hidden" %>">A</span>
+	<span class="movie-watch movie-s <%- movie.s ? "" : "hidden" %>">S</span>
 
 	<div class="movie-details hidden">
-		<% if (!movie.a) { %>
-			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>" data-a="true">
-				A has watched
-			</a>
-		<% } %>
+		<a href="javascript:void(0);" class="watched-by a <%- !movie.a ? "" : "hidden" %>" 
+			data-id="<%- movie.id %>" data-a="true">
+			A has watched
+		</a>
 
-		<% if (!movie.s) { %>
-			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>" data-s="true">
-				S has watched
-			</a>
-		<% } %>
+		<a href="javascript:void(0);" class="watched-by s <%- !movie.s ? "" : "hidden" %>" 
+			data-id="<%- movie.id %>" data-s="true">
+			S has watched
+		</a>
 
-		<span class="watched-both <%- movie.a && movie.s ? "" : "hidden" %>">Watched by both :)</span>
+		<span class="watched-both <%- movie.a && movie.s ? "" : "hidden" %>">
+			Watched by both :)
+		</span>
 	</div>
 </li>

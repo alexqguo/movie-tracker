@@ -27,9 +27,9 @@ router.post('/movies/create', function(req, res, next) {
 });
 
 router.put('/movies/:id/update', function(req, res, next) {
-  db.Movie.find({ where: { id: req.params.id } })
+  db.Movie.update(req.body, { where: { id: req.params.id } })
     .then(function(movie) {
-      res.send(movie);
+      res.send({status: "SUCCESS"});
     })
     .catch(function(error) {
       res.status(500).send({status: "ERROR", error: error});
