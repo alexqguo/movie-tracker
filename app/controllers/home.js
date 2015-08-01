@@ -7,10 +7,10 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  db.Article.findAll().then(function (articles) {
+  db.Movie.findAll().then(function (movies) {
     res.render('index', {
       title: 'Movies!',
-      articles: articles
+      movies: movies
     });
   });
 });
