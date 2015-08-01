@@ -56,7 +56,7 @@ h1 {
     margin-left: 8px; }
   .input-row .movie-submit {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-weight: 200;
     font-size: 16px;
     font-family: inherit;
@@ -91,8 +91,8 @@ h1 {
   margin-bottom: 5px; }
   .movie-list .movie-item .movie-name {
     margin-right: 5px; }
-  .movie-list .movie-item:hover {
-    cursor: pointer; }
+    .movie-list .movie-item .movie-name:hover {
+      cursor: pointer; }
 
 .movie-watch {
   font-size: 12px;
@@ -104,3 +104,6 @@ h1 {
     background-color: #3f94dc; }
   .movie-watch.movie-s {
     background-color: #963296; }
+
+.hidden {
+  display: none; }

@@ -3,9 +3,19 @@
 (function() {
 	var movieList = document.getElementById("movie-list");
 	var submitButton = document.getElementById("movie-submit");
-	var movieInput = document.getElementById("movie-name");
-	var movieA = document.getElementById("movie-a");
-	var movieS = document.getElementById("movie-s");
+	var movieInput = document.getElementById("movie-form-name");
+	var movieA = document.getElementById("movie-form-a");
+	var movieS = document.getElementById("movie-form-s");
+
+	function handleListClick(e) {
+		var movieItem;
+
+		if (e.target !== e.currentTarget) {
+			movieItem = e.target.matches("li") ? e.target : e.target.parentElement;
+			console.log(movieItem);
+		}
+		e.stopPropagation();
+	}
 
 	function addCreatedMovieToList(movie) {
 		var div = document.createElement("div");
@@ -41,4 +51,5 @@
 	}
 
 	submitButton.addEventListener("click", handleInputSubmit);
+	movieList.addEventListener("click", handleListClick);
 })();
