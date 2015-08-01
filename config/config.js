@@ -27,7 +27,7 @@ var config = {
       name: 'yomovie'
     },
     port: process.env.PORT,
-    db: 'postgres://localhost/yomovie-production'
+    db: process.env.DATABASE_URL
   }
 };
 
