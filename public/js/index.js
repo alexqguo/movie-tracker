@@ -1,6 +1,6 @@
 "use strict";
 
-// (function() {
+(function() {
 	var movieList = document.getElementById("movie-list");
 	var submitButton = document.getElementById("movie-submit");
 	var movieInput = document.getElementById("movie-form-name");
@@ -24,7 +24,7 @@
 				movieItem.querySelectorAll(".movie-" + watcher)[0].classList.remove("hidden");
 				movieItem.setAttribute("data-" + watcher, "true");
 
-				if (movieItem.getAttribute("data-s") && movieItem.getAttribute("data-a")) {
+				if (movieItem.getAttribute("data-s") === movieItem.getAttribute("data-a")) {
 					movieItem.querySelectorAll(".watched-both")[0].classList.remove("hidden");
 				}
 			})
@@ -85,4 +85,4 @@
 
 	submitButton.addEventListener("click", handleInputSubmit);
 	movieList.addEventListener("click", handleListClick);
-// })();
+})();
