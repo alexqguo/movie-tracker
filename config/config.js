@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'yomovie'
     },
-    port: process.env.PORT,
+    port: 3000,
     db: process.env.DATABASE_URL
   }
 };
