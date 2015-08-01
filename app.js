@@ -7,6 +7,7 @@ var express = require('express'),
 
 var app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./config/express')(app, config);
 

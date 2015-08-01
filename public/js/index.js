@@ -20,15 +20,12 @@
 
 			qwest.post("/movies/create", data, { dataType: "json", responseType: "text" })
 				.then(function(xhr, resp) {
-					console.log(resp);
+					// console.log(resp);
+					movieInput.value = "";
 				})
 				.catch(function(xhr, resp, e) {
 					alert("There was an error processing the request! Sorry.");
 				})
-				.complete(function(xhr, resp) {
-					console.log(resp);
-				});
-
 			// console.log(data);
 		}
 	}
