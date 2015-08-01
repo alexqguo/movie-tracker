@@ -7,9 +7,7 @@ var fs = require('fs'),
 var sequelize;
 
 if (process.env.DATABASE_URL) {
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
-    logging: true
-  });
+  sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
   sequelize = new Sequelize(config.db, {
     storage: config.storage
