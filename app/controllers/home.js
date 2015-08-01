@@ -8,6 +8,17 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   db.Movie.findAll().then(function (movies) {
+
+    movies.sort(function(a, b) {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (b.name > a.name) {
+        return -1;
+      }
+      return 0;
+    });
+
     res.render('index', {
       title: 'Movies!',
       movies: movies
