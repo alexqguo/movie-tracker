@@ -8,7 +8,22 @@
 	var movieS = document.getElementById("movie-form-s");
 
 	function watchMovie(target) {
-		console.log(target);
+		var data = {};
+		var url = "/movies/" + target.getAttribute("data-id") + "/update";		
+
+		if (target.getAttribute("data-a")) data.a = true;
+		if (target.getAttribute("data-s")) data.s = true;
+
+		qwest.put(url, data, { dataType: "json" })
+			.then(function(xhr, resp) {
+				console.log(resp);
+			})
+			.catch(function(xhr, resp, e) {
+				alert("There was an error! I'm lazy so check the console.");
+				console.log(xhr);
+				console.log(resp);
+				console.log(e);
+			});
 	}
 
 	function handleListClick(e) {
@@ -16,8 +31,11 @@
 			watchMovie(e.target);
 		} else {
 			var movieItem = e.target.closest("li");
-			var movieDetails = movieItem.querySelectorAll(".movie-details")[0];
-			movieDetails.classList.toggle("hidden");
+
+			if (movieItem) {
+				var movieDetails = movieItem.querySelectorAll(".movie-details")[0];
+				movieDetails.classList.toggle("hidden");
+			}
 		}
 	}
 
@@ -47,7 +65,7 @@
 					movieS.checked = false;
 				})
 				.catch(function(xhr, resp, e) {
-					alert("There was an error processing the request! Sorry.");
+					alert("There was an error! I'm lazy so check the console.");
 					console.log(xhr);
 					console.log(resp);
 					console.log(e);

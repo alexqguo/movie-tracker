@@ -10,13 +10,13 @@
 
 	<div class="movie-details hidden">
 		<% if (!movie.a) { %>
-			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>">
+			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>" data-a="true">
 				A has watched
 			</a>
 		<% } %>
 
 		<% if (!movie.s) { %>
-			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>">
+			<a href="javascript:void(0);" class="watched-by" data-id="<%- movie.id %>" data-s="true">
 				S has watched
 			</a>
 		<% } %>
