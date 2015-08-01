@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'yomovie'
     },
-    port: 3000,
+    port: process.env.PORT,
     db: 'postgres://localhost/yomovie-production'
   }
 };
