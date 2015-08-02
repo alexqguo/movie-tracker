@@ -6,6 +6,37 @@
 	var movieInput = document.getElementById("movie-form-name");
 	var movieA = document.getElementById("movie-form-a");
 	var movieS = document.getElementById("movie-form-s");
+	var filterA = document.getElementById("filter-a");
+	var filterS = document.getElementById("filter-s");
+
+	function filter() {
+		var dataA, dataS;
+		var movies = document.getElementsByClassName("movie-item");
+		var filterAVal = filterA.checked;
+		var filterSVal = filterS.checked;
+
+		for (var i = movies.length - 1; i >= 0; i--) {
+			dataA = movies[i].getAttribute("data-a");
+			dataS = movies[i].getAttribute("data-s");
+
+			if (filterAVal && dataA === "true" || filterSVal && dataS === "true") {
+				movies[i].style.display = "none";
+			} else {
+				movies[i].style.display = "";
+			}
+		}
+	}
+
+	function clearFilter() {
+		var movies = document.getElementsByClassName("movie-item");
+
+		filterA.checked = false;
+		filterS.checked = false;
+
+		for (var i = movies.length - 1; i >= 0; i--) {
+			movies[i].style.display = "";
+		}
+	}
 
 	function watchMovie(target) {
 		var data = {};
@@ -83,6 +114,8 @@
 		}
 	}
 
+	document.getElementById("filter-clear").addEventListener("click", clearFilter);
+	document.getElementById("mov-filter").addEventListener("click", filter);
 	submitButton.addEventListener("click", handleInputSubmit);
 	movieList.addEventListener("click", handleListClick);
 })();

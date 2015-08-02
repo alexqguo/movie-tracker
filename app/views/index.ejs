@@ -7,12 +7,20 @@
   	<form id="movie-form" class="input-row">
 		  <input id="movie-form-name" name="name" class="movie-name">
 
-		  <span class="watched-by">Already watched by:</span>
+		  <span class="checkbox-label">Already watched by:</span>
 		  <label for="movie-form-a">A:</label> <input id="movie-form-a" type="checkbox" name="a">
 		  <label for="movie-form-s">S:</label> <input id="movie-form-s" type="checkbox" name="s">
 
 		  <input type="submit" id="movie-submit" class="movie-submit" value="Submit!">
 	  </form>
+
+	  <div class="movie-filters">
+	  	<span class="checkbox-label">Needs to watch:</span>
+	  	<label for="filter-a">A:</label> <input id="filter-a" type="checkbox">
+	  	<label for="filter-s">S:</label> <input id="filter-s" type="checkbox">
+	  	<a href="javascript:void(0);" id="mov-filter" class="mov-filter">Filter</a>
+	  	<a href="javascript:void(0);" id="filter-clear" class="mov-filter">Clear</a>
+	  </div>
 
 	  <ul id="movie-list" class="movie-list">
 	  	<% var movie %>

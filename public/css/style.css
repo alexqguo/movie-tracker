@@ -51,9 +51,6 @@ h1 {
 
 .input-row {
   margin-bottom: 20px; }
-  .input-row label {
-    font-weight: 200;
-    margin-left: 8px; }
   .input-row .movie-submit {
     text-decoration: none;
     color: #fff;
@@ -87,6 +84,9 @@ h1 {
       box-shadow: 0 0 5px #51cbee;
       border: 1px solid #51cbee; }
 
+label {
+  margin-left: 8px; }
+
 .movie-list .movie-item {
   font-size: 18px;
   margin-bottom: 10px;
@@ -100,8 +100,6 @@ h1 {
   .movie-list .movie-item .movie-details {
     font-size: 16px;
     margin: 3px 0 0 10px; }
-    .movie-list .movie-item .movie-details .watched-by {
-      margin-right: 5px; }
   .movie-list .movie-item:active .movie-name {
     background-color: #eee; }
 
@@ -115,6 +113,15 @@ h1 {
     background-color: #3f94dc; }
   .movie-watch.movie-s {
     background-color: #963296; }
+
+.movie-filters {
+  margin-bottom: 20px; }
+
+.mov-filter {
+  margin-left: 10px; }
+
+.checkbox-label {
+  margin-right: 5px; }
 
 .hidden {
   display: none; }
